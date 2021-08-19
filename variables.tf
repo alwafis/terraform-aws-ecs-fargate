@@ -276,3 +276,9 @@ variable "enable_execute_command" {
   description = "Specifies whether to enable Amazon ECS Exec for the tasks within the service."
   default     = true
 }
+
+variable "task_container_secrets" {
+  description = "The secrets variables to pass to a container."
+  default     = null
+  type        = list(map(string))
+}
